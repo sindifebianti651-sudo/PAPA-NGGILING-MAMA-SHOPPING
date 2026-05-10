@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPA NGGILING MAMA SHOPPING - Beras Berkualitas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React and ReactDOM CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function RiceFactoryWebsite() {
+            const products = [
+                {
+                    name: "Beras Premium",
+                    price: "Rp 78.000 / 5kg",
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1200&auto=format&fit=crop",
+                    desc: "Beras putih bersih, pulen, dan berkualitas terbaik untuk keluarga.",
+                },
+                {
+                    name: "Beras Ramos",
+                    price: "Rp 72.000 / 5kg",
+                    image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=1200&auto=format&fit=crop",
+                    desc: "Tekstur lembut dan cocok untuk kebutuhan rumah tangga.",
+                },
+                {
+                    name: "Beras Pulen",
+                    price: "Rp 80.000 / 5kg",
+                    image: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?q=80&w=1200&auto=format&fit=crop",
+                    desc: "Rasa nikmat dan aroma khas beras pilihan terbaik.",
+                },
+                {
+                    name: "Beras Medium",
+                    price: "Rp 68.000 / 5kg",
+                    image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1200&auto=format&fit=crop",
+                    desc: "Pilihan hemat dengan kualitas tetap terjaga dan higienis.",
+                },
+            ];
+
+            const gallery = [
+                "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1200&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1517022812141-23620dba5c23?q=80&w=1200&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?q=80&w=1200&auto=format&fit=crop",
+            ];
+
+            return (
+                <div className="bg-[#f9f7f2] text-gray-800 font-sans">
+                    {/* Navbar */}
+                    <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur shadow-md">
+                        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+                            <h1 className="text-xl md:text-2xl font-extrabold text-green-700">
+                                PAPA NGGILING MAMA SHOPPING
+                            </h1>
+
+                            <nav className="hidden md:flex gap-6 font-medium">
+                                <a href="#home" className="hover:text-green-700 transition">Beranda</a>
+                                <a href="#about" className="hover:text-green-700 transition">Tentang</a>
+                                <a href="#products" className="hover:text-green-700 transition">Produk</a>
+                                <a href="#process" className="hover:text-green-700 transition">Produksi</a>
+                                <a href="#gallery" className="hover:text-green-700 transition">Galeri</a>
+                                <a href="#contact" className="hover:text-green-700 transition">Kontak</a>
+                            </nav>
+
+                            <button className="bg-green-700 text-white px-5 py-2 rounded-full hover:scale-105 transition text-sm md:text-base">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </header>
+
+                    {/* Hero Section */}
+                    <section
+                        id="home"
+                        className="relative h-screen flex items-center justify-center text-center text-white"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            alt="Sawah"
+                        />
+                        <div className="absolute inset-0 bg-black/50"></div>
+
+                        <div className="relative z-10 max-w-3xl px-6">
+                            <h2 className="text-4xl md:text-7xl font-extrabold leading-tight mb-6">
+                                Beras Berkualitas Langsung dari Penggilingan Terpercaya
+                            </h2>
+                            <p className="text-lg md:text-2xl mb-8 text-gray-100">
+                                Menyediakan beras premium, pulen, bersih, dan higienis untuk keluarga Indonesia.
+                            </p>
+
+                            <div className="flex justify-center gap-4 flex-wrap">
+                                <a href="#products" className="bg-green-700 hover:bg-green-800 px-6 py-3 rounded-full text-lg font-semibold transition">
+                                    Lihat Produk
+                                </a>
+                                <a href="#contact" className="bg-white text-green-700 hover:scale-105 px-6 py-3 rounded-full text-lg font-semibold transition">
+                                    Hubungi Kami
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Tentang Kami */}
+                    <section id="about" className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <img
+                                src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?q=80&w=1200&auto=format&fit=crop"
+                                alt="Pabrik Beras"
+                                className="rounded-3xl shadow-2xl"
+                            />
+                        </div>
+
+                        <div>
+                            <h3 className="text-4xl font-bold text-green-700 mb-6">Tentang Kami</h3>
+                            <p className="text-lg leading-relaxed text-gray-700 mb-4">
+                                PAPA NGGILING MAMA SHOPPING adalah usaha keluarga terpercaya di bidang penggilingan dan penjualan beras berkualitas.
+                            </p>
+                            <p className="text-lg leading-relaxed text-gray-700 mb-4">
+                                Kami menggunakan mesin modern dan proses higienis untuk menghasilkan beras terbaik dengan kualitas premium.
+                            </p>
+                            <p className="text-lg leading-relaxed text-gray-700">
+                                Dengan pelayanan cepat dan harga terjangkau, kami siap memenuhi kebutuhan beras rumah tangga hingga usaha besar.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Produk */}
+                    <section id="products" className="bg-green-50 py-24 px-6">
+                        <div className="max-w-7xl mx-auto">
+                            <h3 className="text-4xl font-bold text-center text-green-700 mb-14">
+                                Produk Beras Kami
+                            </h3>
+
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {products.map((product, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-white rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300"
+                                    >
+                                        <img
+                                            src={product.image}
+                                            alt={product.name}
+                                            className="h-56 w-full object-cover"
+                                        />
+
+                                        <div className="p-6">
+                                            <h4 className="text-2xl font-bold mb-2">{product.name}</h4>
+                                            <p className="text-green-700 font-semibold mb-3">{product.price}</p>
+                                            <p className="text-gray-600 mb-5">{product.desc}</p>
+
+                                            <button className="w-full bg-green-700 text-white py-3 rounded-full hover:bg-green-800 transition">
+                                                Beli Sekarang
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Proses */}
+                    <section id="process" className="max-w-7xl mx-auto py-24 px-6">
+                        <h3 className="text-4xl font-bold text-center text-green-700 mb-16">
+                            Proses Penggilingan
+                        </h3>
+
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                            {[
+                                "Pemilihan Gabah",
+                                "Pengeringan",
+                                "Penggilingan Modern",
+                                "Penyortiran",
+                                "Pengemasan Higienis",
+                            ].map((step, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white shadow-lg rounded-3xl p-6 hover:shadow-2xl transition"
+                                >
+                                    <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-green-700 text-white flex items-center justify-center text-xl md:text-2xl font-bold">
+                                        {index + 1}
+                                    </div>
+                                    <h4 className="font-bold text-sm md:text-lg">{step}</h4>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Galeri */}
+                    <section id="gallery" className="bg-[#f0f7ef] py-24 px-6">
+                        <div className="max-w-7xl mx-auto">
+                            <h3 className="text-4xl font-bold text-center text-green-700 mb-14">
+                                Galeri Usaha
+                            </h3>
+
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {gallery.map((image, index) => (
+                                    <div key={index} className="overflow-hidden rounded-3xl shadow-lg">
+                                        <img
+                                            src={image}
+                                            alt="Galeri"
+                                            className="w-full h-72 object-cover hover:scale-110 transition duration-500"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Testimoni */}
+                    <section className="max-w-6xl mx-auto py-24 px-6 text-center">
+                        <h3 className="text-4xl font-bold text-green-700 mb-14">
+                            Testimoni Pelanggan
+                        </h3>
+
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {[
+                                "Berasnya pulen dan bersih, keluarga saya sangat suka.",
+                                "Pengiriman cepat dan kualitas premium sesuai harga.",
+                                "Sudah langganan bertahun-tahun karena kualitas terjamin.",
+                            ].map((review, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white rounded-3xl shadow-lg p-8"
+                                >
+                                    <div className="text-yellow-500 text-2xl mb-4">★★★★★</div>
+                                    <p className="text-gray-700 italic">“{review}”</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Kontak */}
+                    <section
+                        id="contact"
+                        className="relative py-24 px-6 text-white"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1600&auto=format&fit=crop"
+                            alt="Toko Beras"
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+
+                        <div className="absolute inset-0 bg-black/70"></div>
+
+                        <div className="relative z-10 max-w-4xl mx-auto text-center">
+                            <h3 className="text-4xl font-bold mb-8">Hubungi Kami</h3>
+
+                            <div className="space-y-4 text-lg">
+                                <p>📞 WhatsApp: 08xxxxxxxxxx</p>
+                                <p>📍 Alamat: Palembang, Indonesia</p>
+                                <p>🕒 Jam Operasional: 08.00 - 20.00 WIB</p>
+                            </div>
+
+                            <form className="mt-10 grid gap-4">
+                                <input
+                                    type="text"
+                                    placeholder="Nama"
+                                    className="p-4 rounded-xl text-black"
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    className="p-4 rounded-xl text-black"
+                                />
+                                <textarea
+                                    placeholder="Pesan"
+                                    rows="5"
+                                    className="p-4 rounded-xl text-black"
+                                ></textarea>
+
+                                <button type="button" className="bg-green-700 hover:bg-green-800 py-4 rounded-xl font-bold text-lg transition">
+                                    Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+
+                    {/* Footer */}
+                    <footer className="bg-green-900 text-white py-8 text-center">
+                        <h4 className="text-2xl font-bold mb-2">
+                            PAPA NGGILING MAMA SHOPPING
+                        </h4>
+                        <p className="text-gray-300 px-4">
+                            Beras Berkualitas untuk Keluarga Indonesia
+                        </p>
+                        <p className="mt-4 text-sm text-gray-400">
+                            © 2026 PAPA NGGILING MAMA SHOPPING. All rights reserved.
+                        </p>
+                    </footer>
+
+                    {/* Floating WhatsApp */}
+                    <a
+                        href="https://wa.me/6281234567890"
+                        target="_blank"
+                        className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white px-5 py-4 rounded-full shadow-2xl text-lg font-bold transition z-[60]"
+                    >
+                        WhatsApp
+                    </a>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<RiceFactoryWebsite />);
+    </script>
+</body>
+</html>
