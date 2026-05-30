@@ -1,2 +1,2 @@
-# PAPA-NGGILING-MAMA-SHOPPING
-Menjual Beras,Gabah,Penggilingan padi,jual pupuk
+# BERAS JAYA DUA PUTRI #
+Menjual Beras,Gabah,Penggilingan padi,
